@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Application Form</title>
+<script>
+function FORM()
+{
+var username = document.getElementById("username").value.toUpperCase();
+var password = document.getElementById("password").value.toUpperCase();    
+if (username === "GLA" && password === "UNIVERSITY" || username === "CEA" && password === "DEPARTMENT" || username === "WEB" && password === "TECHNOLOGY") 
+{
+alert("Welcome!");
+}
+else 
+{
+alert("Error: Invalid username or password.");
+}
+}
+</script>
+<style>
+input[type="submit"] 
+{
+background-color: pink;
+}
+input[type="text"] 
+{
+color: green;
+text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<form id="loginForm" method="get">
+Username<input type="text" id="username" required><br>
+Password<input type="password" id="password" required><br>
+<input type="submit" value="Submit" onclick=FORM()>
+</form>
+</body>
+</html>
